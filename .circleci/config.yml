@@ -44,11 +44,11 @@ jobs:
             mkdir -p output
             
             
-            bundle exec cucumber --format junit --out output//junit.xml
+            bundle exec cucumber --format junit --out output/junit.xml
 
       # collect reports
       - store_test_results:
-          path: /output
+          path: output
       - store_artifacts:
-          path: /output
+          path: output
           destination: output
